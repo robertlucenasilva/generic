@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Clevert.Domain;
+using Clevert.Infrastructure.Data.Interface;
 
 namespace Cleverti_API.Infrastructure.Repository
 {
     public class TodoRepository : BaseRepository, ITodoRepository
-    {
-        public TodoRepository(TodoContext context) : base(context)
+    {        
+        public TodoRepository(ITodoContext context) : base(context)
         { }
         public async Task<bool> Delete(Guid id)
         {

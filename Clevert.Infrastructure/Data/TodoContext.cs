@@ -1,4 +1,5 @@
-﻿using Clevert.Infrastructure.Model;
+﻿using Clevert.Infrastructure.Data.Interface;
+using Clevert.Infrastructure.Model;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Cleverti_API.Infrastructure.Data
 {    
-    public class TodoContext
+    public class TodoContext : ITodoContext
     {
         SemaphoreSlim _semaphore = new SemaphoreSlim(1);
         public List<Todo> Todo { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Clevert.Domain.Repository.Interface;
+using Clevert.Infrastructure.Data.Interface;
 using Cleverti_API.Domain;
 using Cleverti_API.Infrastructure.Data;
 using Cleverti_API.Infrastructure.Repository;
@@ -32,9 +33,10 @@ namespace Cleverti_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<ITodoContext, TodoContext>();
             services.AddScoped<ITodoService, TodoService>();
-            services.AddScoped<ITodoRepository, TodoRepository>();
-            services.AddScoped<TodoContext>();
+            services.AddScoped<ITodoRepository, TodoRepository>();            
+            services.AddSingleton<ITodoContext, TodoContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
