@@ -16,6 +16,7 @@ namespace Cleverti_API.Controllers
     public class TodoController : ControllerBase
     {        
         private readonly ITodoService _service;
+        private readonly ILogger _logger;
 
         public TodoController(ITodoService service)
         {

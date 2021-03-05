@@ -34,6 +34,7 @@ namespace Cleverti_API
         {
             services.AddControllers();
             services.AddScoped<ITodoContext, TodoContext>();
+            services.AddScoped<ITodoContext, TodoContext>();
             services.AddScoped<ITodoService, TodoService>();
             services.AddScoped<ITodoRepository, TodoRepository>();            
             services.AddSingleton<ITodoContext, TodoContext>();

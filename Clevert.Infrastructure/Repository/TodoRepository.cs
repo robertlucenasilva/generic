@@ -9,13 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Clevert.Domain;
 using Clevert.Infrastructure.Data.Interface;
+using Microsoft.Extensions.Logging;
 
 namespace Cleverti_API.Infrastructure.Repository
 {
     public class TodoRepository : BaseRepository, ITodoRepository
-    {        
-        public TodoRepository(ITodoContext context) : base(context)
-        { }
+    {
+        private readonly ILogger _logger;
+        public TodoRepository(ITodoContext context, ILogger<TodoRepository> logger) : base(context)
+        {
+            _logger = logger;
+        }
         public async Task<bool> Delete(Guid id)
         {
             try
@@ -32,8 +36,9 @@ namespace Cleverti_API.Infrastructure.Repository
                     return false;
                 }
             }
-            catch
+            catch(Exception ex)
             {
+                _logger.LogInformation(string.Format("Error trying delete id = {0}.  Error message = {1}",id, ex.Message));
                 return false;
             }
         }
@@ -46,6 +51,7 @@ namespace Cleverti_API.Infrastructure.Repository
             }
             catch(Exception ex)
             {
+                _logger.LogInformation(string.Format("Error trying get by id = {0}.  Error message = {1}", id, ex.Message));
                 return null;
             }
         }
@@ -54,6 +60,7 @@ namespace Cleverti_API.Infrastructure.Repository
         {
             try
             {
+                throw new Exception();
                 var result = new List<TodoVO>();
                 foreach (var item in _context.Todo)
                 {
@@ -63,6 +70,7 @@ namespace Cleverti_API.Infrastructure.Repository
             }
             catch (Exception ex)
             {
+                _logger.LogInformation(string.Format("Error trying get all records .  Error message = {0}", ex.Message));
                 return null;
             }
         }
@@ -75,8 +83,9 @@ namespace Cleverti_API.Infrastructure.Repository
                 await _context.SaveChangesAsync();
                 return obj;
             }
-            catch
+            catch(Exception ex)
             {
+                _logger.LogInformation(string.Format("Error trying insert new record with id = {0}.  Error message = {1}", obj.Id, ex.Message));
                 return null;
             }
         }
@@ -102,6 +111,7 @@ namespace Cleverti_API.Infrastructure.Repository
             }
             catch(Exception ex)
             {
+                _logger.LogInformation(string.Format("Error trying update object with id = {0}.  Error message = {1}", obj.Id, ex.Message));
                 return obj;
             }
         }
