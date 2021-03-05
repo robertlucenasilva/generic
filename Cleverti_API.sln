@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cleverti.API", "Cleverti_API\Cleverti.API.csproj", "{AB327786-5490-4578-AED9-24ED4F7DEBE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cleverti.API.Test", "Cleerti_API_Test\Cleverti.API.Test.csproj", "{93474CA0-0C1E-470A-815B-333D227150C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clevert.Domain", "Clevert.Domain\Clevert.Domain.csproj", "{A248ED98-DE96-4327-B08C-C81989FA7623}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clevert.Infrastructure", "Clevert.Infrastructure\Clevert.Infrastructure.csproj", "{940C7940-0D66-4EC0-A966-5DCB47FBA760}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB327786-5490-4578-AED9-24ED4F7DEBE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB327786-5490-4578-AED9-24ED4F7DEBE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB327786-5490-4578-AED9-24ED4F7DEBE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB327786-5490-4578-AED9-24ED4F7DEBE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93474CA0-0C1E-470A-815B-333D227150C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93474CA0-0C1E-470A-815B-333D227150C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93474CA0-0C1E-470A-815B-333D227150C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93474CA0-0C1E-470A-815B-333D227150C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A248ED98-DE96-4327-B08C-C81989FA7623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A248ED98-DE96-4327-B08C-C81989FA7623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A248ED98-DE96-4327-B08C-C81989FA7623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A248ED98-DE96-4327-B08C-C81989FA7623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{940C7940-0D66-4EC0-A966-5DCB47FBA760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940C7940-0D66-4EC0-A966-5DCB47FBA760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940C7940-0D66-4EC0-A966-5DCB47FBA760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940C7940-0D66-4EC0-A966-5DCB47FBA760}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25D9610C-65AE-45AA-8FDD-20B248833611}
+	EndGlobalSection
+EndGlobal
