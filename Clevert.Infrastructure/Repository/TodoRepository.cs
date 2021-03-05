@@ -59,8 +59,7 @@ namespace Cleverti_API.Infrastructure.Repository
         public async Task<List<TodoVO>> Get()
         {
             try
-            {
-                throw new Exception();
+            {                
                 var result = new List<TodoVO>();
                 foreach (var item in _context.Todo)
                 {
